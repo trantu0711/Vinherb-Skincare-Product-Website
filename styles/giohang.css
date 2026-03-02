@@ -1,0 +1,122 @@
+body {
+  background: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+.cart-container {
+  width: 90%;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Header và Item dùng cùng cấu trúc lưới --- */
+.cart-header,
+.cart-item {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr; /* 5 cột đều nhau */
+  align-items: center;
+  text-align: center;
+}
+
+.cart-header {
+  font-weight: bold;
+  padding: 12px 0;
+  border-bottom: 2px solid #eee;
+  color: #333;
+  background-color: #fff;
+}
+
+/* --- Các dòng sản phẩm --- */
+.cart-item {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+/* --- Cột đầu tiên: Sản phẩm (ảnh + tên) --- */
+.cart-header > div:first-child,
+.cart-item > div:first-child {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* --- Thông tin sản phẩm --- */
+.cart-product-text h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cart-product-text p {
+  margin: 3px 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* --- Nút tăng giảm số lượng --- */
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.quantity-control button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  background: #ddd;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quantity-control button:hover {
+  background: #bbb;
+}
+
+/* --- Cột giá, tổng, thao tác --- */
+.cart-price,
+.cart-total,
+.cart-remove {
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+}
+
+.cart-total {
+  color: #e45b5b;
+  font-weight: bold;
+}
+
+.cart-remove a {
+  color: red;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cart-remove a:hover {
+  text-decoration: underline;
+}
+
+/* --- Tiêu đề giỏ hàng --- */
+.cart-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}

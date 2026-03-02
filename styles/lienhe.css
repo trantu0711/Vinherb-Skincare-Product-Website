@@ -1,0 +1,25 @@
+
+.tt_lienhe {
+    border: 2px solid #8FD9C4;
+    border-radius: 20px; 
+    width: 80%; 
+    height: 35px; 
+    padding: 15px;
+}
+
+#nd_lienhe {
+    width: 80%; 
+    height: 120px; 
+    border: 2px solid #8FD9C4; 
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.bt_lienhe {
+    width: 40%; 
+    height: 35px; 
+    border: 2px solid #EEEEEE; 
+    border-radius: 20px; 
+    background-color: #8FD9C4;
+}
+

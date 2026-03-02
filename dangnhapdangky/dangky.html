@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="/styles/dangky.css">
+    <link rel="stylesheet" href="/styles/loading.css">
+</head>
+
+<body>
+    <!-- --------------loading------------- -->
+    <div id="loader">
+        <div id="loading"></div>
+
+    </div>
+    <div id="content" style="display: none;">
+        <div">
+            <div style="width: 800px; margin: auto; margin-top: 140px;">
+                <table>
+                    <div style="text-align: center; width: 100%;">
+                        <span style="font-size: 50px;">Đăng Ký</span>
+                    </div>
+                    <tr>
+                        <td style="width:400px;">
+                            <div><img src="/images/logo3.svg" width="100%" alt=""></div>
+                        </td>
+                        <td style=" text-align: center; width: 400px; display: block; padding: 50px">
+
+                            <div>
+                                <form onsubmit="return handleRegister(event)">
+                                    <p><input class="dk_name" type="text" placeholder="Tên đăng nhập" required></p>
+                                    <p><input class="dk_name" id="email" type="email" placeholder="Gmail\sdt" required></p>
+                                    <p><input class="dk_name" id="password" type="text" placeholder="Password" required></p>
+                                    <p><input class="dk_name" id="confirmPassword" type="text"
+                                            placeholder="Nhập lại Password"></p>
+                                    <p id="errorMessage" class="error"></p>
+                                    <button class="bt_dangnhap" type="submit">Đăng Ký</button>
+                                </form>
+                                <br>
+                                
+                                <a style="color: #8FD9C4; font-size: 20px;" href="dangnhap.html">Đăng Nhập</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+    </div>
+    </div>
+    <script src="/scripts/loading.js"></script>
+
+    <script>
+        function handleRegister(e) {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const pass = document.getElementById("password").value;
+            const confirm = document.getElementById("confirmPassword").value;
+            const errorMsg = document.getElementById("errorMessage");
+
+            if (pass !== confirm) {
+                errorMsg.textContent = "❌ Mật khẩu không khớp.";
+                return false;
+            }
+
+            // Lưu vào localStorage
+            localStorage.setItem("userEmail", email);
+            localStorage.setItem("userPassword", pass);
+
+            alert("✅ Đăng ký thành công! Bây giờ bạn có thể đăng nhập.");
+            window.location.href = "dangnhap.html"; // chuyển sang trang đăng nhập
+        }
+    </script>
+</body>
+
+</html>

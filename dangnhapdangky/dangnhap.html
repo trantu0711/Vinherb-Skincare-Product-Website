@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="/styles/dangky.css">
+    <link rel="stylesheet" href="/styles/loading.css">
+</head>
+
+<body>
+    <!-- --------------loading------------- -->
+    <div id="loader">
+        <div id="loading"></div>
+
+    </div>
+    <div id="content" style="display: none;">
+        <div">
+            <div style="width: 800px; margin: auto; margin-top: 140px;">
+                <table>
+                    <div style="text-align: center; width: 100%;">
+                        <span style="font-size: 50px;">Đăng Nhập</span>
+                    </div>
+                    <tr>
+                        <td style="width:400px;">
+                            <div><img src="/images/logo3.svg" width="100%" alt=""></div>
+                        </td>
+                        <td style=" text-align: center; width: 400px; display: block; padding: 50px">
+
+                            <div>
+                                <form onsubmit="return handleLogin(event)">
+                                    <p><input class="dk_name" type="text" id="email" placeholder="Tên đăng nhập"></p>
+                                    <p><input class="dk_name" type="text" id="password" placeholder="Password"></p>
+                                    <p id="errorMessage" class="error"></p>
+                                    <button class="bt_dangnhap" type="submit">Đăng Nhập</button>
+                                </form>
+                                <br>
+                                <a style="color: #8FD9C4; font-size: 20px;" href="dangky.html">Đăng Ký</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+    </div>
+    </div>
+    <script src="/scripts/loading.js"></script>
+
+    <script>
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const pass = document.getElementById("password").value;
+            const errorMsg = document.getElementById("errorMessage");
+
+            // Lấy tài khoản đã đăng ký
+            const savedEmail = localStorage.getItem("userEmail");
+            const savedPass = localStorage.getItem("userPassword");
+
+            if (email === savedEmail && pass === savedPass) {
+                errorMsg.textContent = "";
+                alert("✅ Đăng nhập thành công!");
+                window.location.href = "../index.html"; // chuyển về trang chủ
+            } else {
+                errorMsg.textContent = "❌ Email hoặc mật khẩu không đúng.";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* <!-- ----menu---- --> */
+
+.menu {
+    text-align: center;
+
+}
+
+.menu > ul {
+    list-style-type: none;
+    text-align: center;
+    
+}
+
+.menu > ul > li {
+    display :inline-flex;
+    text-align: center;
+    align-items: center;
+}
+
+.menu > ul > li >a {
+    color: black;
+    text-decoration: none;
+    padding : 7px 25px;
+    font-size: 18px;
+}
+
+
+.menu > ul > li > a > i {
+    margin-right: 5px;  /*khoangr cách icon chữ */
+    font-size: 16px;
+}
+
+.logo {
+    display :inline-flex;
+    align-items: center;
+    margin : 0 180px;
+
+}
+
+.logo ul li {
+    display :inline;
+    padding : 0 40px;
+    font-size: 15px;
+    
+}
+
+.logo ul li a{
+   color: black;
+   text-decoration: none;
+   font-size: 20px;
+}
+
+i {
+    margin-right: 5px;
+}
+
+.logo img {
+    width : 17%;
+    margin-right: 75px; 
+}
+
+.logo ul li input  {
+    padding: 8px 50px;
+    border: 3px solid #8FD9C4;
+    border-radius: 10px;
+}
+
+.search {
+    position: relative;
+    display: inline-block;
+}
+
+.icon {
+    padding-right: 20px;
+    position: absolute;
+    transform: translateX(50px) translateY(7px);
+    /* color : #8FD9C4; */
+    font-size: 24px;
+}
+
+/* --------------- */
+
+/* -- ------banner------ --*/
+.banner {
+    width: 80%;
+    margin: auto;
+    
+
+}
+
+.banner img {
+    border-radius: 15px;
+    width: 100%;
+    
+}
+
+/* <!-- ------------ --> */
+
+
+.sanpham h5 {
+    color: red;
+}
+
+.sanpham i {
+    color: #8FD9C4;
+}
+
+.giacu {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.maSP {
+    display: flex;
+    justify-content: space-between;
+}
+
+.maSP p {
+    font-size: 15px;
+}
+
+.thongtin_sp {
+    text-decoration: none;
+    color: black;
+    
+    
+}
+
+.thongtin_sp:hover {
+    color: #8FD9C4;
+} 
+
+
+.thongtin_sp:hover img {
+    transform: scale(1.04);
+    transition: transform 0.3s ease;
+      
+} 
+
+/* <!-- -----------footer---------- --> */
+.footer {
+    background-color: #EEEEEE;
+}
+.footer .col_1 li {
+    display: flex;
+}
+
+.col_1 {
+    padding: 13px 0 0 0px;
+    width: 120%;
+}
+
+
+
+
+
+
+

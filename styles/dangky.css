@@ -1,0 +1,23 @@
+.dk_name {
+    border-bottom: 2px solid #8FD9C4;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 80%;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.dk_name:focus {
+    outline: none;
+}
+
+.bt_dangnhap {
+    margin: 7px;
+    width: 83%;
+    height: 30px;
+    background-color: #8FD9C4;
+    border: none;   
+    font-size: 15px;
+    color: white;
+}
